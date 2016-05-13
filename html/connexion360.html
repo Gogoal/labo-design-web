@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="../img/favicon360tv_0.png" type="image/png">
+
+	</head>
+	<body>
+
+		<div class="panel">
+
+						
+			<div id="connecteur" class="positionconnecteurLoginRouge">
+				<div class="cercleCGIrouge"> </div>
+				<div class="connecteurinclineRouge"></div>
+				<div class="connecteurRouge"></div>
+			</div>
+
+			<div id="connecteur2" class="positionconnecteurPasswordRouge">
+				<div class="cercleCGIrouge"> </div>
+				<div class="connecteurinclineRouge"></div>
+				<div class="connecteurRouge"></div>
+			</div>
+
+			<form id="form" class="positionformConnection" action="cible.php" method="post">
+							
+				<p class="inputform1"><input type="text" name="login" placeholder="Login ..."/></p></br>
+				<p class="inputform2"><input type="password" name="pwd" placeholder="Password ..."/></p></br>
+
+			</form>
+
+		</div>
+
+		<a href="../index.html">Retour au menu</a>
+<!-- 		<p><input type="submit" value="Connexion" class="button" /></p> -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+		<script>
+			$(document).ready(function(){
+			    $(".cercleCGIrouge").fadeIn(500, function(){
+			    	 $(".connecteurinclineRouge").animate({width: '25px'}, "slow", function(){
+			    	 	$(".connecteurRouge").animate({width: '190px'}, "slow");
+			    	 });
+			    });
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="img/favicon360tv_0.png" type="image/png">
+		<meta charset="utf-8" />
+		<script src="../svg/snap/dist/snap.svg-min.js"></script>
+
+	</head>
+	<body>
+
+		<svg width="0" height="0">
+
+			<pattern id="pattern"
+					 patternUnits="userSpaceOnUse"
+					 x="0"
+					 y="0"
+					 width="100"
+					 height="100"
+					 viewBox="0 0 10 10">
+
+				<path d="M-5, 0, 10, 15M0-5,15,10"
+					  stroke="white" stroke-width="5" />
+
+			</pattern>
+
+		</svg>
+
+		<a href="../index.html">Retour au menu</a>
+		<!-- <p><input type="submit" value="Connexion" class="button" /></p> -->
+
+		<script type="text/javascript">
+			var s = Snap();
+			var circleMiel = s.circle(100, 100, 50);
+			var circleCitrouille = s.circle(100, 100, 50);
+			var circleBetterave = s.circle(100, 100, 50);
+
+			circleMiel.attr({
+				fill:"#F2A200"
+			});
+			circleCitrouille.attr({
+				fill:"#FF6A00",
+				style:"margin-left:300px; positions:absolute;"
+			});
+			circleBetterave.attr({
+				fill:"#991F3D",
+			}).hover(function () {
+            	circleBetterave.attr ( { fill:"white"} )
+         	});
+
+		</script>
+
+		<script src="../svg/snap/dist/snap.svg-min.js"></script>
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+
+
+	</body>
+</html>

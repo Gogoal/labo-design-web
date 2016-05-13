@@ -1,0 +1,77 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<script type="text/javascript" src="http://leunen.me/fakesmile/smil.user.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+
+<body>
+
+<div id='svgnotsupported' style='visibility: hidden;'><h1>This application requires SVG     support</h1></div>
+<div id='svgsupported' style='visibility: hidden'></div>
+<script>
+var svgsupport;
+
+window.onload=function supportsSvg() {
+var ua = navigator.userAgent;
+var M = ua.match(/(chrome)\/?\s*(\.?\d+(\.\d+)*)/i);
+var b =   document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure",  "1.0")
+ if(b || M) {
+    svgsupport = document.getElementById('svgsupported');
+}
+else {
+    svgsupport = document.getElementById('svgnotsupported');
+}
+svgsupport.style.visibility = 'visible';
+}
+</script>
+
+
+
+<svg id="no_fewer_than_N_events_E_between_event_Q_and_first_R_thereafter" width="588" height="578" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+
+<defs>
+    <marker id="Triangle" viewBox="0 0 20 20" refX="20" refY="10" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 20 10 L 0 20 z" fill="blue"/>
+    </marker>
+    <marker id="Circle" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="strokeWidth" markerWidth="6" markerHeight="6" orient="auto">
+        <circle cx="5" cy="5"  r="3" fill="blue"/>
+    </marker>
+</defs>
+
+
+
+
+        <g>
+        <path id="_4JpShw3P09cVj6Vb1lR041" d="M 399.0,228.0 
+           a 20.0 40.0, 0, 1, 0, 54.0 0.0"
+         style="fill:none;stroke:blue ;stroke-width:3"
+         marker-end="url(#Triangle)" />
+
+        <rect id="anim_4JpShw3P09cVj6Vb1lR041" x="-5" y="-5" width="10" height="10" fill="red">
+        <animateMotion  path="M 399.0,228.0 
+           a 20.0 40.0, 0, 1, 0, 54.0 0.0" dur="5s"
+               rotate="auto" repeatCount="indefinite" begin="1s"  />
+        </rect> 
+        </g>
+
+
+        <g>
+         <rect id="_0uuE73jF5kmqe14s6Y02NF" x="372" y="165" rx="10.0" ry="6.0"
+          width="109" height="63"
+           style="fill:white;stroke:black;stroke-width:4;opacity:0.5">
+           <animate id="anim_0uuE73jF5kmqe14s6Y02NF" attributeName="stroke" attributeType="CSS" from="lime" to="black" dur="2s" repeatCount="indefinite" />
+          </rect>
+
+
+
+
+         </g>
+
+
+</svg>
+
+
+</body>
+</html>
