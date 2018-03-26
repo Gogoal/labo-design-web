@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="img/favicon360tv_0.png" type="image/png">
+		<!-- styles needed by jScrollPane -->
+		<link type="text/css" href="../css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<meta charset="utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jscrollpane/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="../js/jscrollpane/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="../js/jscrollpane/mwheelIntent.js"></script>
+
+	</head>
+	<body>
+
+		<div class="panel" id="header">
+
+		<img src="../img/spiraleDepart.png" id="spirale">
+
+		<a class="scrollTo" href="#header">
+			<div id="rocketTop">
+				<img src="../img/rocketTop.png" id="rocket"> 
+				<img src="../img/flammerouge1.png" id="flammerouge1">
+				<img src="../img/flammerouge2.png" id="flammerouge2">
+			</div>
+		</a>
+
+		<div class="scroll-pane jspSCrollable">
+			<div class="jspContainer">
+				<div class="jspane"></div>
+				<div class="jspVerticalBar"></div>
+				<div class="jspHorizontalBar"></div>
+			</div>
+		</div>
+
+		<!-- http://fr-6tv.groupinfra.com:8080/sites/all/themes/sixshoptheme/images/valide.png -->
+
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+				</br>
+		</br>
+		</br>
+		</br>
+				</br>
+		</br>
+		</br>
+		</br>
+				</br>
+		</br>
+		</br>
+		</br>
+				</br>
+		</br>
+		</br>
+		</br>
+				</br>
+		</br>
+		</br>
+		</br>
+				</br>
+		</br>
+		</br>
+		</br>
+
+
+
+		<div><p>YOLO</p></div>
+
+
+		</div>
+
+
+		<a href="../index.html">Retour au menu</a>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
+
+		<script type="text/javascript">
+
+			(function ($) {
+				$(window).bind('mousewheel DOMMouseScroll', function(event){
+				    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+				        $("#flammerouge2").css( "display", "inline" ).fadeOut(1250);
+				    }
+				    else {
+				        $("#flammerouge1").css( "display", "inline" ).fadeOut(1250);
+				    }
+				});
+			})(jQuery);
+
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.scrollTo').on('click', function() { // Au clic sur un l'élément
+					var page = $(this).attr('href'); // Page cible
+					var speed = 750; // Durée de l'animation (en ms)
+					$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+					$("#flammerouge2").css( "display", "inline" ).fadeOut(speed);
+					return false;
+				});
+			});
+		</script>
+	</body>
+</html>

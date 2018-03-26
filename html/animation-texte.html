@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/style.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/jquery-letterfx.css">
+		<link rel="shortcut icon" href="img/favicon360tv_0.png" type="image/png">
+		<meta charset="utf-8" />
+		
+	</head>
+	<body>
+
+		<p class="tagline"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+		<button class="animate">Animer</button>
+
+
+		<a href="../index.html">Retour au menu</a>
+
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="../js/jquery-letterfx.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function{
+				$(".animate").click(function{
+					$(".tagline").letterfx({"fx":"smear","letter_end":"rewind"});
+				});
+			});
+		</script>
+
+
+	</body>
+</html>

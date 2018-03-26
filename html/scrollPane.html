@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="img/favicon360tv_0.png" type="image/png">
+		<!-- styles needed by jScrollPane -->
+		<link type="text/css" href="../css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+		<meta charset="utf-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jscrollpane/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="../js/jscrollpane/jquery.jscrollpane.min.js"></script>
+		<script type="text/javascript" src="../js/jscrollpane/mwheelIntent.js"></script>
+
+	</head>
+	<body>
+
+		<div class="ma-scroll-pane box1">
+			<!-- <div class="lineScroll"></div> -->
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<span class="arrowSearch"></span>
+		</div>
+
+		<!-- <div class="lineScroll"></div> -->
+
+
+
+		<a href="../index.html">Retour au menu</a>
+
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				$('.ma-scroll-pane').jScrollPane({
+
+					verticalDragMinHeight: 30,
+					verticalDragMaxHeight: 30,
+					horizontalDragMinWidth: 30,
+					horizontalDragMaxWidth: 30
+
+				});
+
+
+
+				// var api = $(this).data('jsp');
+				// var throttleTimeout;
+				// $(window).bind(
+				// 	'resize',
+				// 	function()
+				// 	{
+				// 		if (!throttleTimeout) {
+				// 			throttleTimeout = setTimeout(
+				// 				function()
+				// 				{
+				// 					api.reinitialise();
+				// 					throttleTimeout = null;
+				// 				},
+				// 				50
+				// 			);
+				// 		}
+				// 	}
+				// );
+			});
+		</script>
+
+<!-- 		<script type="text/javascript">
+			$(".lineScroll").prependTo(".jspVerticalBar");
+		</script> -->
+
+	</body>
+</html>

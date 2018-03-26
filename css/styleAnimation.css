@@ -1,0 +1,101 @@
+/* TEST NOUVELLE ANIMATION 360TV */
+
+/* Text */
+#text1-responsive {
+  display:none;
+}
+
+#text2-responsive {
+  display:none;
+}
+
+#text3-responsive {
+  display:none;
+}
+
+/* Matériel */
+
+#laptop {
+  display:none;
+}
+
+#phone {
+  display:none;
+}
+
+#computer {
+  display:none;
+  
+/*  -moz-transition: transform 2s ease-in-out 1s;
+  -webkit-transition: transform 2s ease-in-out 1s;
+  -o-transition: transform 2s ease-in-out 1s;
+      
+  transform: scale(1) translate(0px,0px);*/
+}
+
+#phoneLandscape {
+  display:none;
+}
+
+#tablette {
+  display:none;
+}
+
+/*#coeur {
+
+  display:none;
+}*/
+
+#coeur #path4672 {
+  display:none;
+/*  -moz-transition: transform 2s ease-in-out 0s;
+  -webkit-transition: transform 2s ease-in-out 0s;
+  -o-transition: transform 2s ease-in-out 0s;*/
+      
+  -webkit-animation: pulse 1s ease infinite;
+  -moz-animation: pulse 1s ease infinite;
+  -o-animation: pulse 1s ease infinite;
+      
+/*  transform: scale(1) translate(0px,0px);*/
+  animation: pulse 1s ease infinite;
+/*  animation: responsive 1s ease*/
+}
+
+/* EFFECT PULSE */
+
+@-webkit-keyframes pulse {
+  0% {-webkit-transform: scale(1) translate(0px,0px);}
+  25% {-webkit-transform: scale(1.5) translate(-9px,-9px);}
+  0% {-webkit-transform: scale(1) translate(0px,0px);}
+  75% {-webkit-transform: scale(1.5) translate(-9px,-9px);}
+  100% {-webkit-transform: scale(1) translate(0px,0px);}
+}
+
+@-moz-keyframes pulse {
+  0% {-moz-transform: scale(1) translate(0px,0px);}
+  25% {-moz-transform: scale(1.5) translate(-9px,-9px);}
+  0% {-moz-transform: scale(1) translate(0px,0px);}
+  75% {-moz-transform: scale(1.5) translate(-9px,-9px);}
+  100% {-moz-transform: scale(1) translate(0px,0px);}
+}
+
+@-o-keyframes pulse {
+  0% {-o-transform: scale(1) translate(0px,0px);}
+  25% {-o-transform: scale(1.5) translate(-9px,-9px);}
+  50% {-o-transform: scale(1.5) translate(0px,0px);}
+  75% {-o-transform: scale(1.5) translate(-9px,-9px);}
+  100% {-o-transform: scale(1) translate(0px,0px);}
+}
+
+/*#path4672 {
+
+  -moz-transition: transform 2s ease-in-out 0s;
+  -webkit-transition: transform 2s ease-in-out 0s;
+  -o-transition: transform 2s ease-in-out 0s;
+  transform: scale(1);
+}
+
+#path4672:active {
+  transform: scale(0.5);
+}
+*/

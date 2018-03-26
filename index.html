@@ -24,7 +24,7 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="index.html"></a>
-		      <img alt="CGI" src="img/logoCGI.png">
+		      <img alt="CGI" id="CGI360" src="img/CGI360.gif">
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,10 +34,18 @@
 		        <li><a href="html/connexion360.html">=> Ecran de connexion final <=</a></li>
 		        <li><a href="php/contact360.php">=> Page contact <=</a></li>
 		        <li><a href="html/boutonscroll.html">=> Bouton scroll <=</a></li>
+		        <li><a href="html/boutonScrollVersion2.html">=> Bouton scroll version 2 <=</a></li>
 		        <li><a href="html/hypnose.html">Hypnotisation</a></li>
-		        <li><a href="html/animationSVG.html">Animation en SVG</a></li>
 		        <li><a href="html/hoverimages.html">Hover sur images</a></li>
 		        <li><a href="html/canvas.html">Création de CANVAS STYLEY</a></li>
+		        <li><a href="html/scrollPane.html">ScrollPane !</a></li>
+		        <li><a href="html/ADN.html">ADN svg js effect</a></li>
+		        <li><a href="html/animationSVG-SNAP.html">Animation SVG-SNAP</a></li>
+		        <li><a href="html/animationSVG-SMIL.html">Animation SVG-SMIL</a></li>
+		        <li><a href="html/animationSVG-SMIL -the Return.html">Animation SVG-SMIL THE RETURN</a></li>
+		        <li><a href="html/animationSVG-CSS.html">Animation SVG-CSS</a></li>
+		        <li><a href="html/animation-texte.html">Animation Texte</a></li>
+		        <li><a href="html/logoDashboard.html">Logo dashboard</a></li>
 		      </ul>
 		    
 		      <ul class="nav navbar-nav navbar-right">
@@ -68,14 +76,29 @@
 			        </div>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="placementLoader">
+			            <img class="loader" src="img/loader.gif">
+			            <p>Chargement</p>
+			        </div>
+				</div>
+			</div>
 		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$( ".placementLoader" ).fadeIn(1000);
+			 });
+		</script>
 
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	    <script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+<!-- 	    <script type="text/javascript" src="js/jquery-2.2.3.js"></script> -->
 	    
     </body>
 </html>

@@ -10,7 +10,7 @@
 
 		<div class="panel">
 
-						
+		<div class="panelAnimation">		
 			<div id="connecteur" class="positionconnecteurNameRouge">
 				<div class="cercleCGIrouge"> </div>
 				<div class="connecteurinclineRouge"></div>
@@ -48,6 +48,7 @@
 				<div class="connecteurJauneB1"></div>
 				<div class="connecteurJauneB2"></div>
 			</div>
+		</div>
 
 			<form id="formcontact" class="positionformConnection" action="processEnvoi.php" method="post">
 			

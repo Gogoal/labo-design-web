@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="../css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="img/favicon360tv_0.png" type="image/png">
+		<meta charset="utf-8" />
+		<script src="../svg/snap/dist/snap.svg-min.js"></script>
+
+	</head>
+	<body>
+
+		<svg width="0" height="0">
+			<pattern id="pattern" patternUnits="userSpaceOnUse" x="0" y="0" width="10" height="10" viewBox="0 0 10 10">
+				<path d="M-5, 0, 10, 15M0-5, 15, 10" stroke="white" stroke-width="5"/>
+			</pattern>
+		</svg>
+
+		                    <div class="containerPercent">
+                        <div id="percent"></div>
+                        <svg id="svg"></svg>
+                        <p class="percentP"><label for="perc-input">Percent:</label><input class="inputPercent" maxlength="2" type="text" id="input" value="65"/></p>
+                        <a class="btnRun" id="run">Run</a>
+                    </div>
+
+
+		<a href="../index.html">Retour au menu</a>
+		<!-- <p><input type="submit" value="Connexion" class="button" /></p> -->
+
+		<script type="text/javascript">
+			// First lets create our drawing surface out of existing SVG element
+			// If you want to create new surface just provide dimensions
+			// like s = Snap(800, 600);
+			var s = Snap(300, 300);
+			// Lets create big circle in the middle:
+			var bigCircle = s.circle(150, 150, 100);
+			// By default its black, lets change its attributes
+			bigCircle.attr({
+			    fill: "#bada55",
+			    stroke: "#000",
+			    strokeWidth: 5
+			});
+			// Now lets create another small circle:
+			var smallCircle = s.circle(100, 150, 70);
+
+			var discs = s.group(smallCircle, s.circle(200, 150, 70));
+
+			discs.attr({
+			    fill: "#fff"
+			});
+
+			// Now more interesting stuff
+			// Lets assign this group as a mask for our big circle
+			bigCircle.attr({
+			    mask: discs
+			});
+
+			// Despite our small circle now is a part of a group
+			// and a part of a mask we could still access it:
+			smallCircle.animate({r: 50}, 1000);
+
+
+		</script>
+
+		<script type="text/javascript">
+			// First lets create our drawing surface out of existing SVG element
+			// If you want to create new surface just provide dimensions
+			// like s = Snap(800, 600);
+			var s = Snap(300, 300);
+			// Lets create big circle in the middle:
+			var bigCircle = s.circle(150, 150, 100);
+			// By default its black, lets change its attributes
+			bigCircle.attr({
+			    fill: "#bada55",
+			    stroke: "#000",
+			    strokeWidth: 5
+			});
+
+
+		</script>
+
+		<script type="text/javascript">
+			
+			var canvasSize = 200,
+    centre = canvasSize/2,
+    radius = canvasSize*0.8/2,
+    s = Snap('#svg'),
+    path = "",
+    arc = s.path(path),    
+    startY = centre-radius,
+    runBtn = document.getElementById('run'),
+    percDiv = document.getElementById('percent'),
+    input = document.getElementById('input');
+
+input.onkeyup = function(evt) {
+    if(isNaN(input.value)) {
+      input.value = '';
+    }
+};
+
+runBtn.onclick = function() {
+  run(input.value/100);
+};
+
+function run(percent) {
+    var endpoint = percent*360;
+    Snap.animate(0, endpoint,   function (val) {
+        arc.remove();
+
+        var d = val,
+            dr = d-90;
+            radians = Math.PI*(dr)/180,
+            endx = centre + radius*Math.cos(radians),
+            endy = centre + radius * Math.sin(radians),
+            largeArc = d>180 ? 1 : 0;  
+            path = "M"+centre+","+startY+" A"+radius+","+radius+" 0 "+largeArc+",1 "+endx+","+endy;
+  
+        arc = s.path(path);
+        arc.attr({
+          stroke: '#3da08d',
+          fill: 'none',
+          strokeWidth: 12
+        });
+        percDiv.innerHTML =    Math.round(val/360*100) +'%';
+
+    }, 2000, mina.easeinout);  
+}
+
+run(input.value/100);
+
+
+
+
+
+
+		</script>
+
+		<script src="../svg/snap/dist/snap.svg-min.js"></script>
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> -->
+
+
+	</body>
+</html>
